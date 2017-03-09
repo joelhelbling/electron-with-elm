@@ -1,0 +1,18 @@
+{
+  "name": "feldspar",
+  "version": "1.0.0",
+  "description": "Example app using Elm with Electron (from https://medium.com/@ezekeal/building-an-electron-app-with-elm-part-1-boilerplate-3416a730731f#)",
+  "main": "index.js",
+  "scripts": {
+    "elm": "elm make Main.elm --output elm.js || true",
+    "elm:watch": "chokidar '**/*.elm' -c 'npm run elm'",
+    "start": "electron main.js",
+    "watch": "npm run start & npm run elm:watch & wait",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar": "^1.6.1"
+  }
+}
